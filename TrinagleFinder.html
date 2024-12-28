@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image" href="/Triangle-Finder/favicon.png"/>
+    <title>Triangle Calculator</title>
+</head>
+
+<body class="bg-black">
+    <div class="md:hidden flex justify-center items-center h-screen">
+        <h1 class="text-4xl text-white">Open on PC</h1>
+    </div>
+    <div class="md:flex lg:justify-around md:justify-between md:items-center hidden">
+        <div class="p-2 h-screen w-1/2">
+            <h1 class="py-4 text-3xl lg:text-4xl text-white">Triangle Calculator</h1>
+            <div class="my-2">
+                <h1 class="text-sm lg:text-md px-2 text-white">Enter 3 angle(degree).</h1>
+                <input class="lg:w-20 w-14 px-2 py-1 m-2 rounded-lg placeholder:text-center placeholder:italic" type="text" id="angle1" placeholder="∠ A">
+                <input class="lg:w-20 w-14 px-2 py-1 m-2 rounded-lg placeholder:text-center placeholder:italic" type="text" id="angle2" placeholder="∠ B">
+                <input class="lg:w-20 w-14 px-2 py-1 m-2 rounded-lg placeholder:text-center placeholder:italic" type="text" id="angle3" placeholder="∠ C">
+            </div>
+            <div class="my-2">
+                <h1 class="text-sm lg:text-md px-2 text-white">Enter only 1 side(unit).</h1>
+                <input class="lg:w-20 w-14 px-2 py-1 m-2 rounded-lg placeholder:text-center placeholder:text-sm placeholder:italic" type="text" id="side1" placeholder="Side A">
+                <input class="lg:w-20 w-14 px-2 py-1 m-2 rounded-lg placeholder:text-center placeholder:text-sm placeholder:italic" type="text" id="side2" placeholder="Side B">
+                <input class="lg:w-20 w-14 px-2 py-1 m-2 rounded-lg placeholder:text-center placeholder:text-sm placeholder:italic" type="text" id="side3" placeholder="Side C">
+            </div>
+            <div class="p-2 flex gap-5">
+
+                <button class="bg-blue-500 text-white lg:w-20 w-14 px-2 py-1 rounded-lg" id="button">Check</button>
+                <button class="bg-red-500 text-white lg:w-20 w-14 px-2 py-1 rounded-lg" id="reset">Reset</button>
+            </div>
+
+
+            <div class="main py-2">
+                <div class="text-white text-xl lg:text-2xl py-2" id="sides">
+
+                </div>
+                <div class="text-white text-xl lg:text-2xl py-2" id="sums">
+
+                </div>
+                <div class="text-white text-xl lg:text-2xl py-2" id="result">
+
+                </div>
+            </div>
+            <footer class="text-neutral-500 fixed bottom-4 text-sm">
+                Note: The created triangle may sometimes go outside this box if the value of any side exceeds 40-45 u (units).
+            </footer>
+        </div>
+
+        <canvas class="bg-neutral-900 text-white" id="triangleCanvas" width="500"
+            height="500"></canvas>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
